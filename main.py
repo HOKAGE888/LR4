@@ -1,5 +1,9 @@
+import os
+
 def fanal():
-  pass
+    path = input('Введите путь к необходимой директории: ')
+    path.replace('/', '\\')
+    return path
 
 def fps():
   pass
