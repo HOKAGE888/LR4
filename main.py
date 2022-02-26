@@ -39,3 +39,5 @@ def fvf(doubles):
     if v > 1:
       print(k + ': ' + str(v))
 
+if __name__=='__main__':
+      print(fvf(fanal())
