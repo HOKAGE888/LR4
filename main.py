@@ -33,6 +33,9 @@ def fpupp(dictionary):
         dublicates[key] = identical_size[key]
   return dublicates
 
-def fvf():
-  pass
+
+def fvf(doubles):
+  for k, v in dict.items(doubles):
+    if v > 1:
+      print(k + ': ' + str(v))
 
