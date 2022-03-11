@@ -2,7 +2,9 @@ import os
 
 def fanal():
     path = input('Введите путь к необходимой директории: ')
-    path.replace('/', '\\')
+    if !(os.path.exists(path)):
+        print('Такого пути не существует, перезапустите программу')
+        sys.exit()
     return path
 
 def fps():
