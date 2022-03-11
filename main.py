@@ -2,12 +2,13 @@ import os
 
 def fanal():
     path = input('Введите путь к необходимой директории: ')
-    if !(os.path.exists(path)):
+    if os.path.exists(path)==False:
         print('Такого пути не существует, перезапустите программу')
-        sys.exit()
+        os.abort()
     return path
 
-def fps():
+def fps(path):
+  dictionary={}
   for filename in os.listdir(path):
         try:
             path_to_file = os.path.join(path, filename)
@@ -17,7 +18,7 @@ def fps():
                 dictionary[path_to_file] = os.path.getsize(path_to_file)
         except PermissionError:
             pass
-    return dictionary
+  return dictionary
 
 def fpupp(dictionary):
   dublicates = {}
@@ -40,6 +41,8 @@ def fvf(doubles):
   for k, v in dict.items(doubles):
     if v > 1:
       print(k + ': ' + str(v))
+  if doubles =={}:
+      print('Дубликатов не найдено')
 
 if __name__=='__main__':
-      print(fvf(fanal())
+    fvf(fpupp(fps(fanal())))
